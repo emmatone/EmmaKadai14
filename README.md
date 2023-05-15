@@ -14,7 +14,7 @@
 <li>Identifiable</li>
 <li>ObservableObject/EnvironmentObject</li>
 <li>@Environment</li>
-<li>未入力や、空白スペースのときは追加されないようにした。.trimmingCharacters(in: .whitespaces)</li>
+<li>未入力や、空白スペースのときは追加されないようにした。</li>
 
 
 </ul>
