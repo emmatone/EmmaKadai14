@@ -25,9 +25,8 @@ class Fruits: ObservableObject {
         // 文字列の両端から空白を削除
         let trimediFruitName = fruitName.trimmingCharacters(in: .whitespaces)
         // 文字列が空ではない時だけ追加する
-        if trimediFruitName != "" {
+        if trimediFruitName.isEmpty == false {
             fruitsData.append(Fruit(name: trimediFruitName))
         }
     }
-
 }
