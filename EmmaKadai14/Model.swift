@@ -21,12 +21,15 @@ class Fruits: ObservableObject {
         Fruit(name: "パイナップル", isChecked: true)
     ]
 
-    func addNewFruit(_ fruitName: String) {
+    func addNewFruitIfPossible(_ fruitName: String) -> Bool {
         // 文字列の両端から空白を削除
         let trimediFruitName = fruitName.trimmingCharacters(in: .whitespaces)
         // 文字列が空ではない時だけ追加する
         if !trimediFruitName.isEmpty {
             fruitsData.append(Fruit(name: trimediFruitName))
+            return true
+        } else {
+            return false
         }
     }
 }

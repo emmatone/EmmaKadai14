@@ -33,7 +33,7 @@ struct FruitEditView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button("Save"){
-                        fruits.addNewFruit(newFruitName)
+                        _ = fruits.addNewFruitIfPossible(newFruitName)
                         dismiss()
                     }
                 }
