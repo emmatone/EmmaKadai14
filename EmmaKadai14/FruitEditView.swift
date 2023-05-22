@@ -33,7 +33,14 @@ struct FruitEditView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button("Save"){
-                        fruits.addNewFruit(newFruitName)
+                        // fbを受けて修正
+                        // ワイルドカードに戻り値を入れるというか破毀される
+                        // 関数の戻り値はこのviewでは必要がないからワイルドカード？
+                        // 関数の戻り値がない場合があるからワイルドカード?
+//                        let kekka = fruits.addNewFruitIfPossible(newFruitName)
+
+//                        print(kekka)
+                        _ = fruits.addNewFruitIfPossible(newFruitName)
                         dismiss()
                     }
                 }
