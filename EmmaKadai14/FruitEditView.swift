@@ -34,11 +34,13 @@ struct FruitEditView: View {
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button("Save"){
                         // fbを受けて修正
-                        // ワイルドカードに戻り値を入れるというか破毀される
-                        // 関数の戻り値はこのviewでは必要がないからワイルドカード？
-                        // 関数の戻り値がない場合があるからワイルドカード?
+                        /* Swiftは、戻り値が存在する関数に対してはその戻り値を適切に扱うことを強制します。
+                        しかし、全ての関数の戻り値が常に必要というわけではありません。
+                         ある関数の戻り値があるにも関わらず、それを使う予定がない場合や、
+                         単にその戻り値が今のところ関係ない場合があります。このような場合に、
+                         Swiftでは _ = を使って、あえてその戻り値を受け取らない（無視する）ことを明示的に表現します。
+                         */
 //                        let kekka = fruits.addNewFruitIfPossible(newFruitName)
-
 //                        print(kekka)
                         _ = fruits.addNewFruitIfPossible(newFruitName)
                         dismiss()
